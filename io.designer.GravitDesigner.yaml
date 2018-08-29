@@ -30,7 +30,7 @@ modules:
           - ./*.AppImage --appimage-extract
           - rm *.zip *.AppImage *.html
           - mv squashfs-root gravit-designer
-          - chmod 755 gravit-designer/gravit-designer
+          - chmod -R 755 gravit-designer
       - type: script
         dest-filename: gravit-designer
         commands:
