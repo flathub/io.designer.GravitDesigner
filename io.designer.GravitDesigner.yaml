@@ -25,11 +25,15 @@ modules:
       - type: script
         dest-filename: apply_extra
         commands:
+          - mkdir _tmp
+          - mv *.gz _tmp
+          - cd _tmp
           - gunzip *.gz
           - unzip *.zip
           - ./*.AppImage --appimage-extract
-          - rm *.zip *.AppImage *.html
-          - mv squashfs-root gravit-designer
+          - mv squashfs-root ../gravit-designer
+          - cd ..
+          - rm -rf _tmp
           - chmod -R 755 gravit-designer
       - type: script
         dest-filename: gravit-designer
@@ -44,5 +48,5 @@ modules:
       - type: extra-data
         filename: GravitDesigner.zip.gz
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
-        sha256: e1fdd707118e575528c04f139796f826259da484cf332ac2732df3da77929d53
-        size: 69608816
+        sha256: 1ac2e85ea39be862ad10fbb912796654d6413eb623c035fecad92f0c264efcb3
+        size: 137993715
