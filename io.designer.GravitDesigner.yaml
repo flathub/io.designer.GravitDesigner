@@ -48,5 +48,5 @@ modules:
       - type: extra-data
         filename: GravitDesigner.zip.gz
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
-        sha256: 884ad016267b9003448c3e70aeb52e59343a9216d256281e80c130ba8fb26ca9
-        size: 138133100
+        sha256: 50993b8eac653296ea280ffee50511c28de3492f498d6c3ce11fe5887c5b26e8
+        size: 138102343
