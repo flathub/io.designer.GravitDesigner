@@ -20,8 +20,8 @@
       <image>https://gravit.io/assets/home/designerimage.png</image>
     </screenshot>
   </screenshots>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <releases>
-    <release version="2019-1.4" date="2019-02-20"></release>
+    <release version="2019-1.4"/>
   </releases>
 </component>
