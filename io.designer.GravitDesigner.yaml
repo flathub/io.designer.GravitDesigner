@@ -5,8 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
 command: gravit-designer
-tags:
-  - proprietary
+tags: [proprietary]
 finish-args:
   - --socket=x11
   - --share=ipc
@@ -14,6 +13,7 @@ finish-args:
   - --device=dri
   - --filesystem=home
 modules:
+
   - name: gravit-designer
     buildsystem: simple
     build-commands:
@@ -47,5 +47,9 @@ modules:
       - type: extra-data
         filename: GravitDesigner.zip.gz
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
-        sha256: 2d76cfbee54f1d7d9c3c860fd4cfa167e5494217cebb5190e71405c3f6796940
-        size: 369386403
+        sha256: 8cf5283d20dcf42439700402d93003cfa7c9c5480c689f2dd92275593c375ab1
+        size: 372935367
+      - type: shell
+        commands:
+          - sed -i '3i <releases><release version=\"2019-1.9\" date=\"2019-05-21\"/></releases>'
+            io.designer.GravitDesigner.appdata.xml
