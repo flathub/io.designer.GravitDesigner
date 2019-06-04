@@ -5,6 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
 command: gravit-designer
+separate-locales: false
 tags: [proprietary]
 finish-args:
   - --socket=x11
