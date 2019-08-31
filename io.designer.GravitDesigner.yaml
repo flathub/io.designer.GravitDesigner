@@ -52,5 +52,5 @@ modules:
         size: 378119302
       - type: shell
         commands:
-          - sed -i '3i <releases><release version=\"3.5.26\" date=\"2019-08-21\"/></releases>'
+          - sed -i '3i <releases><release version=\"2019-2.5\" date=\"2019-08-21\"/></releases>'
             io.designer.GravitDesigner.appdata.xml
