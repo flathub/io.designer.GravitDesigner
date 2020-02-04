@@ -48,8 +48,11 @@ modules:
       - type: extra-data
         filename: GravitDesigner.zip.gz
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
-        sha256: de24591741b3a3077ef6848d7011a8d9bc011fbf62fb2d42920b3e7bbfa92ac4
-        size: 194659593
+        sha256: a10a21d1231788e83b9014f46f64d64bd5a5a0bf216a031017b45fded4154dce
+        size: 194662518
+        x-checker-data:
+          type: rotating-url
+          url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
       - type: shell
         commands:
           - sed -i '3i <releases><release version="2019-2.7" date="2019-10-10"/></releases>'
