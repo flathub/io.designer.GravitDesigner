@@ -14,11 +14,20 @@ finish-args:
   - --device=dri
   - --filesystem=home
 modules:
+  - name: unappimage
+    buildsystem: simple
+    build-commands:
+      - make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS} install INSTALL_DIR=${FLATPAK_DEST}/bin
+    sources:
+      - type: git
+        url: https://github.com/refi64/unappimage
+        commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
 
   - name: gravit-designer
     buildsystem: simple
     build-commands:
-      - install -Dt /app/bin apply_extra gravit-designer
+      - install -D apply_extra "${FLATPAK_DEST}/bin/apply_extra"
+      - install gravit-designer "${FLATPAK_DEST}/bin/"
       - install -Dm644 -t /app/share/metainfo io.designer.GravitDesigner.appdata.xml
       - install -Dm644 -t /app/share/applications io.designer.GravitDesigner.desktop
       - install -Dm644 -t /app/share/icons/hicolor/128x128/apps io.designer.GravitDesigner.png
@@ -26,15 +35,11 @@ modules:
       - type: script
         dest-filename: apply_extra
         commands:
-          - mkdir _tmp
-          - mv *.gz _tmp
-          - cd _tmp
-          - gunzip *.gz
-          - unzip *.zip
-          - mv __appImage-x64 ../gravit-designer
-          - cd ..
-          - rm -rf _tmp
-          - chmod -R 755 gravit-designer
+          - unzip GravitDesigner.zip
+          - chmod +x GravitDesigner.AppImage
+          - unappimage GravitDesigner.AppImage
+          - rm GravitDesigner.AppImage
+          - mv squashfs-root gravit-designer
       - type: script
         dest-filename: gravit-designer
         commands:
@@ -46,7 +51,7 @@ modules:
       - type: file
         path: io.designer.GravitDesigner.appdata.xml
       - type: extra-data
-        filename: GravitDesigner.zip.gz
+        filename: GravitDesigner.zip
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
         sha256: a242230572533ffe9c4745aa0081201f7577dd4f42836479f1f9e13429585c56
         size: 194721402
