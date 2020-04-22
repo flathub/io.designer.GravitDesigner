@@ -60,5 +60,5 @@ modules:
           url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
       - type: shell
         commands:
-          - sed -i '3i <releases><release version="2020-1.1" date="2020-01-22"/></releases>'
+          - sed -i '3i <releases><release version="2020-1.2" date="2020-04-22"/></releases>'
             io.designer.GravitDesigner.appdata.xml
