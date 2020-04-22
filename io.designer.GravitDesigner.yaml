@@ -43,7 +43,7 @@ modules:
       - type: script
         dest-filename: gravit-designer
         commands:
-          - exec /app/extra/gravit-designer/gravit-designer "$@"
+          - zypak-wrapper /app/extra/gravit-designer/gravit-designer "$@"
       - type: file
         path: io.designer.GravitDesigner.desktop
       - type: file
