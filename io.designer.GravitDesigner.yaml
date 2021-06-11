@@ -53,8 +53,8 @@ modules:
       - type: extra-data
         filename: GravitDesigner.zip.gz # browser = .zip, curl = .zip.gz
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
-        sha256: 208673e00b741102c707326ada0e3338511955d82898ff3a30c930c2736506f6
-        size: 419426279
+        sha256: 7a81c44887c9e6ce9936eacc6e109658c1ecd226fb76e103e04d22c839d77a1c
+        size: 419428227
         x-checker-data:
           type: rotating-url
           url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
