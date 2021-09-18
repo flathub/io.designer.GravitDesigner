@@ -29,7 +29,7 @@ modules:
       - install -D apply_extra gravit-designer -t /app/bin
       - install -Dm644 io.designer.GravitDesigner.appdata.xml -t /app/share/metainfo
       - install -Dm644 io.designer.GravitDesigner.desktop -t /app/share/applications
-      - install -Dm644 io.designer.GravitDesigner.png -t /app/share/icons/hicolor/128x128/apps
+      - install -Dm644 io.designer.GravitDesigner.svg -t /app/share/icons/hicolor/scalable/apps
     sources:
       - type: script
         dest-filename: apply_extra
@@ -47,7 +47,7 @@ modules:
       - type: file
         path: io.designer.GravitDesigner.desktop
       - type: file
-        path: io.designer.GravitDesigner.png
+        path: io.designer.GravitDesigner.svg
       - type: file
         path: io.designer.GravitDesigner.appdata.xml
       - type: extra-data
