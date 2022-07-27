@@ -34,7 +34,6 @@ modules:
       - type: script
         dest-filename: apply_extra
         commands:
-          - gunzip GravitDesigner.zip.gz
           - unzip GravitDesigner.zip
           - rm GravitDesigner.zip
           - unappimage GravitDesigner.AppImage
@@ -51,7 +50,7 @@ modules:
       - type: file
         path: io.designer.GravitDesigner.appdata.xml
       - type: extra-data
-        filename: GravitDesigner.zip.gz # browser = .zip, curl = .zip.gz
+        filename: GravitDesigner.zip
         url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
         sha256: ca94dce521f94c91dae0903b9947bd4a6b6238643badf65bb6224f44f0b3f368
         size: 416466763
