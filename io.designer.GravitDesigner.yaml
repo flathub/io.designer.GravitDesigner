@@ -51,9 +51,9 @@ modules:
         path: io.designer.GravitDesigner.appdata.xml
       - type: extra-data
         filename: GravitDesigner.zip
-        url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
-        sha256: ca94dce521f94c91dae0903b9947bd4a6b6238643badf65bb6224f44f0b3f368
-        size: 416466763
+        url: https://app.corelvector.com:443/
+        sha256: b6aadaecda9e6b1759fbd5d10648455d465d08dffb23974ad09c1e9bcf5679f1
+        size: 1422
         x-checker-data:
           type: rotating-url
           url: https://designer.gravit.io/_downloads/linux/GravitDesigner.zip
