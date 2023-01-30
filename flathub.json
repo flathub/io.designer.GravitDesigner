@@ -1,3 +1,4 @@
 {
   "only-arches": ["x86_64"]
+  "end-of-life": "This app is no longer maintained as it has been rebranded to Corel Vector due to acquisition by Corel and is not available for desktop version, only for web"
 }
